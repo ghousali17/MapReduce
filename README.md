@@ -6,6 +6,22 @@ MapReduce program.
 ## WordCount
  This contains code for calculating the word counts, the word pair counts (bigram count) and bigram relative frequencies.
  
+### 1. Word Count
+Returns all words and their number of occurances in a text file.
+### 2. Word Length Count
+Returns all distinct lengths of words and their number of occurances in a text file.
+### 3. Bigram Initial Count
+Returns the initials of all consecutive words the number of times they occur together in a text file.
+### 4. Bigram Initial Relative Frequency
+Returns the initials of all consecutive words and the frequency of their occurance in a text file relative to the count of the prefix.
+```
+f(B|A) = count(A, B) / count(A)
+```
+### Usage
+1. Create hdfs directory /input and put input text file into this directory
+2. Execute one of the run* scripts to run the respective preogram.
+
+
  ## ParallelDijkstra
  This contains code for calculating all the possible shortest paths from a single source node. Dijkstra's algorithm is implemented as a 
  greedy Breadth First Search since we have worked under the assumption that the data might be too large for a single computer to process.
